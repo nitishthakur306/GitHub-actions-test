@@ -11,3 +11,17 @@ jobs:
          run: |
            node -v
            npm -v
+  parallel-job:
+    runs-on: macos-latest
+    steps:
+       - name: software version
+         run:  sw_vers
+  dependent-job:
+    runs-on: window-latest
+    needs: run-shell-commands
+    steps: 
+       - name: echo string
+         run: Write-output "window system" 
+       - name: Error output
+         run: thiscommanddoesnotwork
+
