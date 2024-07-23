@@ -23,5 +23,5 @@ jobs:
        - name: echo string
          run: Write-output "window system" 
        - name: Error output
-         run: thiscommanddoesnotwork
+         run: doesntwork
 
